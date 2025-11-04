@@ -1,0 +1,19 @@
+startprogram _pr1 ;
+startblock variable int_2 _ab0 , _ab1, _ab2 , _ab3 ;
+
+  get(_ab0) ;
+  get(_ab1) ;
+
+  put(_ab0 + _ab1) ;
+  put(_ab0 - _ab1) ;
+  put(_ab0 * _ab1) ;
+  put(_ab0 / _ab1) ;
+  put(_ab0 % _ab1) ;
+
+  (_ab0 - _ab1) * 10 + (_ab0 + _ab1) / 10 =: _ab2 ; 
+  _ab2 + _ab2 % 10 =: _ab3 ;
+  
+  put(_ab2) ;
+  put(_ab3) ;
+
+endblock

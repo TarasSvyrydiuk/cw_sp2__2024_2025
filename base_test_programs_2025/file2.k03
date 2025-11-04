@@ -1,0 +1,35 @@
+startprogram _pr2;
+startblock variable int_2 _aa0 , _bb1, _cc2 , _mm3;
+
+  get(_aa0);
+  get(_bb1);
+  get(_cc2);
+
+  if _aa0 gr _bb1 and _aa0 gr _cc2 {
+    _aa0 =: _cc3;
+  } else if _bb1 gr _aa0 and _bb1 gr _cc2 {
+    _bb1 =: _mm3;
+  } else {
+    _cc2 =: _mm3;
+  }
+  put ( _mm3 );
+
+  if ( _aa0 eq _bb1 ) and ( _aa0 eq _cc2 ) and ( _bb1 eq _cc2 ) {
+    put ( 1 );
+  } else {
+    put ( 0 );
+  }
+    
+  if ( _aa0 less 0 ) or  !( _bb1 less 0 ) or  !( _cc2 less 0 ) {
+    put ( -1 );
+  } else {
+    put ( 0 );
+  }
+
+  if ( _aa0 less ( _bb1 + _cc2 ) ) {
+    put ( 10 );
+  } else {
+    put ( 0 );
+  }
+ 
+endblock

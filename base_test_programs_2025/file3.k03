@@ -1,0 +1,24 @@
+startprogram _pr3;
+startblock variable int_2 _aa0 , _bb1 , _ca1 , _cb2 , _xv0;
+  get ( _aa0 );
+  get ( _bb1 );
+
+_aa0 =: _ca1;
+while _ca1 less _bb1 + 1{
+    put(_ca1 * _ca1);
+    _ca1 + 1 =: _ca1;
+}
+ 
+0 =: _xv0;
+1 =: _ca1;
+while _ca1 less _aa0 + 1{
+    1 =: _cb2;
+    while _cb2 less _bb1 + 1{
+	_xv0 + 1 =: _xv0;
+	_cb2 + 1 =: _cb2; 
+	}
+    _ca1 + 1 =: _ca1;
+}
+put(_xv0);
+  
+endblock
