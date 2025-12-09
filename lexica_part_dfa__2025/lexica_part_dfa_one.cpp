@@ -4,15 +4,15 @@
 *                         file: lexicapart_dfa_one.cpp      *
 *                                                  (draft!) *
 *************************************************************/
-#define MAX_DFA_SCAN_LEXEM_SIZE_FOR_TOKEN_PARSING 16
-#define USE_DFA_FOR_TOKEN_PARSING
-#define USE_DFA_TO_ACCEPT_KEYWORD
-#define USE_DFA_TO_ACCEPT_IDENTIFIER
-#define USE_DFA_TO_ACCEPT_UNSIGNEDVALUE
+//#define MAX_DFA_SCAN_LEXEM_SIZE_FOR_TOKEN_PARSING 16
+//#define USE_DFA_FOR_TOKEN_PARSING
+//#define USE_DFA_TO_ACCEPT_KEYWORD
+//#define USE_DFA_TO_ACCEPT_IDENTIFIER
+//#define USE_DFA_TO_ACCEPT_UNSIGNEDVALUE
 
-#define TOKENS_RE         ";|:=|=:|\\+|-|\\*|,|==|!=|:|\\[|\\]|\\(|\\)|\\{|\\}|<=|>=|[_0-9A-Za-z]+|[^ \t\r\f\v\n]"
-#define KEYWORDS_RE       ";|:=|=:|\\+|-|\\*|,|==|!=|:|\\[|\\]|\\(|\\)|\\{|\\}|NAME|DATA|BODY|END|BREAK|CONTINUE|GET|PUT|IF|ELSE|FOR|TO|DOWNTO|DO|WHILE|REPEAT|UNTIL|GOTO|DIV|MOD|<=|>=|NOT|AND|OR|INTEGER16"
-#define IDENTIFIERS_RE    "_[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]"
+#define TOKENS_RE         ";|:=|=:|\\+|-|\\*|,|eq|noteq|:|\\[|\\]|\\(|\\)|\\{|\\}|less|gr|[_0-9A-Za-z]+|[^ \t\r\f\v\n]"
+#define KEYWORDS_RE       ";|:=|=:|\\+|-|\\*|,|eq|noteq|:|\\[|\\]|\\(|\\)|\\{|\\}|startprogram|variable|startblock|endblock|break|continue|get|put|if|else|while|/|%|less|gr|!|and|or|int_2"
+#define IDENTIFIERS_RE    "_[a-z][a-z][0-9]"
 #define UNSIGNEDVALUES_RE "0|[1-9][0-9]*"
 
 #include "../built_src/dfa.hpp"
@@ -22,7 +22,7 @@
 #include "../built_src/file3.hpp"
 #include "../built_src/file4.hpp"
 
-#define DEFAULT_INPUT_FILE "../base_test_programs_2025/file1.k03"
+#define DEFAULT_INPUT_FILE "../base_test_programs_2025/file3.k03"
 //#define DEFAULT_INPUT_FILE "../other_test_programs_2025/file4.k03"
 
 #define SUCCESS_STATE 0
